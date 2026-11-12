@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.rendsad.app.ui.auth.LoginFragment"
+        android:label="Login"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_login_to_sport"
+            app:destination="@id/sportSelectionFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/sportSelectionFragment"
+        android:name="com.rendsad.app.ui.sport.SportSelectionFragment"
+        android:label="Deporte"
+        tools:layout="@layout/fragment_sport_selection">
+        <action
+            android:id="@+id/action_sport_to_registration"
+            app:destination="@id/coachRegistrationFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/coachRegistrationFragment"
+        android:name="com.rendsad.app.ui.registration.CoachRegistrationFragment"
+        android:label="Registro"
+        tools:layout="@layout/fragment_coach_registration">
+        <argument
+            android:name="sport"
+            android:defaultValue="futbol"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/studentsListFragment"
+        android:name="com.rendsad.app.ui.students.StudentsListFragment"
+        android:label="Alumnos"
+        tools:layout="@layout/fragment_students_list">
+        <action
+            android:id="@+id/action_students_to_add"
+            app:destination="@id/addStudentFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/addStudentFragment"
+        android:name="com.rendsad.app.ui.students.AddStudentFragment"
+        android:label="Agregar alumno"
+        tools:layout="@layout/fragment_add_student" />
+
+    <fragment
+        android:id="@+id/trainingSessionFragment"
+        android:name="com.rendsad.app.ui.training.TrainingSessionFragment"
+        android:label="Sesión de entrenamiento"
+        tools:layout="@layout/fragment_training_session" />
+
+
+
+
+
+
+</navigation>

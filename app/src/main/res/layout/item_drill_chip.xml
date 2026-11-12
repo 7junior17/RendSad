@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.chip.Chip xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/App.Chip"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:checkedIcon="@drawable/ic_check_circle"
+    app:checkedIconTint="@color/chip_text"
+    app:checkedIconVisible="true"
+    app:chipIcon="@drawable/ic_add"
+    app:chipIconSize="16dp"
+    app:chipIconTint="@color/chip_text"
+    app:chipIconVisible="true"
+    app:ensureMinTouchTargetSize="false" />
