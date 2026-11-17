@@ -11,7 +11,7 @@ import com.rendsad.app.databinding.ItemStudentBinding
 import com.rendsad.app.model.Student
 import com.rendsad.app.model.StudentStatus
 
-class StudentAdapter : ListAdapter<Student, StudentAdapter.ViewHolder>(Diff) {
+class StudentAdapter(private val onClick: (Student) -> Unit) : ListAdapter<Student, StudentAdapter.ViewHolder>(Diff) {
 
     class ViewHolder(val b: ItemStudentBinding) : RecyclerView.ViewHolder(b.root)
 
@@ -26,6 +26,7 @@ class StudentAdapter : ListAdapter<Student, StudentAdapter.ViewHolder>(Diff) {
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val s = getItem(position)
         val b = holder.b
+        b.root.setOnClickListener { onClick(s) }
         fun color(id: Int) = ContextCompat.getColor(b.root.context, id)
 
         b.tvName.text = s.name

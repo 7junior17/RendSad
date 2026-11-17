@@ -16,7 +16,7 @@ class StudentsListFragment : Fragment(R.layout.fragment_students_list) {
     private var _binding: FragmentStudentsListBinding? = null
     private val binding get() = _binding!!
 
-    private val adapter = StudentAdapter()
+    private val adapter = StudentAdapter { findNavController().navigate(R.id.action_students_to_detail) }
     private var query = ""
     private var category = "Todos"
 

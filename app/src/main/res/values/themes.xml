@@ -44,4 +44,13 @@
         <item name="boxStrokeWidthFocused">1.5dp</item>
         <item name="startIconTint">@color/on_surface_variant</item>
     </style>
+    <style name="App.Chip.Tag" parent="Widget.Material3.Chip.Assist">
+        <item name="chipBackgroundColor">@color/surface_container</item>
+        <item name="android:textColor">@color/on_surface</item>
+        <item name="android:textSize">12sp</item>
+        <item name="chipStrokeWidth">0dp</item>
+        <item name="chipCornerRadius">16dp</item>
+        <item name="chipMinHeight">28dp</item>
+        <item name="ensureMinTouchTargetSize">false</item>
+    </style>
 </resources>

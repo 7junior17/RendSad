@@ -43,6 +43,9 @@
         <action
             android:id="@+id/action_students_to_add"
             app:destination="@id/addStudentFragment" />
+        <action
+            android:id="@+id/action_students_to_detail"
+            app:destination="@id/studentDetailFragment" />
     </fragment>
 
     <fragment
@@ -56,6 +59,26 @@
         android:name="com.rendsad.app.ui.training.TrainingSessionFragment"
         android:label="Sesión de entrenamiento"
         tools:layout="@layout/fragment_training_session" />
+
+    <fragment
+        android:id="@+id/studentDetailFragment"
+        android:name="com.rendsad.app.ui.detail.StudentDetailFragment"
+        android:label="Ficha del alumno"
+        tools:layout="@layout/fragment_student_detail">
+        <action
+            android:id="@+id/action_detail_to_training"
+            app:destination="@id/trainingSessionFragment" />
+        <action
+            android:id="@+id/action_detail_to_match"
+            app:destination="@id/matchRegistrationFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/matchRegistrationFragment"
+        android:name="com.rendsad.app.ui.match.MatchRegistrationFragment"
+        android:label="Registro de partido"
+        tools:layout="@layout/fragment_match_registration" />
+
 
 
 
